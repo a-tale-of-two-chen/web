@@ -10,7 +10,7 @@
 echo "start:<br>";
 
 header("content-type: text/html; charset=utf-8");      //设置PHP的编码UTF-8
-$servername = "localhost";
+$servername = "127.0.0.1";  //不要填localhost
 $username = "root";
 $password = "51130012cyc";
 
@@ -31,7 +31,7 @@ mysqli_query($db,"set names'utf8'");
 echo "成功连接<br>";
 
 $term = "三体";
-$query = 'select * from  Book.books where name = ? limit 10';
+$query = 'select * from  book.books where Name = ? limit 10';
 $stmt  = $db->prepare($query);
 $stmt->bind_param('s',$term);
 $stmt->execute();
