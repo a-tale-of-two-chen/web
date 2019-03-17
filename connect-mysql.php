@@ -6,20 +6,30 @@
 </head>
 <body>
 <?php
+//专门匹配服务器环境
+echo "start:<br>";
+
 header("content-type: text/html; charset=utf-8");      //设置PHP的编码UTF-8
 $servername = "localhost";
 $username = "root";
 $password = "51130012cyc";
 
+echo "开始创建连接<br>";
+
 // 创建连接
 $db = new mysqli($servername, $username, $password);
+
+// 检测连接
+if ($db->connect_errno  ) {
+	printf("连接失败,请重新尝试。",$db->connect_error );
+	exit();
+}
 //设置数据的字符集utf-8
 mysqli_query($db,"set names'utf8'");
 
-// 检测连接
-if (mysqli_connect_errno()) {
-    die("连接失败,请重新尝试。" );
-}
+
+echo "成功连接<br>";
+
 $term = "三体";
 $query = 'select * from  Book.books where name = ? limit 10';
 $stmt  = $db->prepare($query);
