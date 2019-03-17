@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <meta charset="UTF-8">
+    <title>C++中用fixed以及setprecision 设置输出精度:</title>
+</head>
+<body>
+<cite title="没错，这是我照抄的">文章来源：https://blog.csdn.net/Dakin_/article/details/80859193</cite>
+<h1>C++中用fixed以及setprecision 设置输出精度</h1>
+<p>搬运工：陈南华</p>
+<p>时间：2018-12-31</p>
+<p><b>从以下的例子可以快速地学习如何设置输出精度。</b></p>
+<p>
+    #include&#60iostream&#62<br/>
+    #include &#60iomanip&#62<br/>
+    using namespace std;<br/>
+        <br/>
+
+        int main( void )<br/>
+        {<br/>
+        &nbsp; &nbsp; &nbsp; &nbsp;const double value = 12.3456789;<br/>
+        &nbsp; &nbsp; &nbsp; &nbsp;cout << value << endl; // 默认以6精度，所以输出为 12.3457<br/>
+        &nbsp; &nbsp; &nbsp; &nbsp;cout << setprecision(4) << value << endl; // 改成4精度，所以输出为12.35<br/>
+        &nbsp; &nbsp; &nbsp; &nbsp;cout << setprecision(8) << value << endl; // 改成8精度，所以输出为12.345679<br/>
+        &nbsp; &nbsp; &nbsp; &nbsp;cout << fixed << setprecision(4) << value << endl; //
+        加了fixed意味着是固定点方式显示，所以这里的精度指的是小数位，输出为12.3457<br/>
+        &nbsp; &nbsp; &nbsp; &nbsp;cout << value << endl; // fixed和setprecision的作用还在，依然显示12.3457<br/>
+        &nbsp; &nbsp; &nbsp; &nbsp;cout.unsetf( ios::fixed ); // 去掉了fixed，所以精度恢复成整个数值的有效位数，显示为12.35<br/>
+        &nbsp; &nbsp; &nbsp; &nbsp;cout << value << endl;<br/>
+        &nbsp; &nbsp; &nbsp; &nbsp;cout.precision( 6 ); // 恢复成原来的样子，输出为12.3457<br/>
+        &nbsp; &nbsp; &nbsp; &nbsp;cout << value << endl;<br/>
+        &nbsp; &nbsp; &nbsp; &nbsp;cout << fixed << value << endl;<br/>
+        }<br/>
+
+        <b>
+            使用eclipse运行结果：
+        </b>
+<p/>
+        <img src="image/setprecision_result.png">
+<div style="width:300px;margin:0 auto; padding:20px 0;">
+    <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44011302001914"
+       style="display:inline-block;text-decoration:none;height:20px;line-height:20px;">
+        <img src="image/beian.png" 	style="float:left;"/>
+        <p style="float:left;height:20px;line-height:20px;margin: 0px 	0px 0px 5px; color:#939393;">粤公网安备 44011302001914号</p><br>
+        <img src="image/my_icon.png" 	style="float:left;"/>
+        <p style="float:left;height:20px;line-height:20px;margin: 0px 	0px 0px 5px; color:#939393;">联系方式：2630966248@qq.com</p>
+    </a>
+</div>
+</body>
+</html>
