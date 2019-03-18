@@ -17,7 +17,7 @@ $password = "51130012cyc";
 echo "开始创建连接<br>";
 
 // 创建连接
-$db = new mysqli($servername, $username, $password);
+$db = new mysqli($servername, $username, $password,book);
 
 // 检测连接
 if ($db->connect_errno  ) {
