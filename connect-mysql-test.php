@@ -6,11 +6,11 @@
 </head>
 <body>
 <?php
-//专门匹配服务器环境
+//---------------------------------------此版本专门匹配服务器环境
 echo "start:<br>";
 
 header("content-type: text/html; charset=utf-8");      //设置PHP的编码UTF-8
-$servername = "127.0.0.1";  //不要填localhost
+$servername = "127.0.0.1";  //在Linux端不要填localhost
 $username = "root";
 $password = "51130012cyc";
 
@@ -39,6 +39,7 @@ $stmt->bind_result($ID,$name,$author,$score,$syno,$site);
 while ($stmt->fetch()){
     echo "<p>序号:".$ID."<br> ".$name."   简介："."<br>".$syno."<br></p>";
 }
+$stmt->free_result();
 $db->close();
 ?>
 </body>
