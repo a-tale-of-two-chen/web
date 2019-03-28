@@ -1,67 +1,31 @@
-<!doctype html>
-<html>
+﻿<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta charset="utf-8">
-<style type="text/css">
-	li{float: left;
-	display: block;
-	width:150px;
-	height: 30px;
-	line-height: 30px;background:#A395E8;
-	text-align:center;
-	text-decoration:none; }
-	</style>
-<title>豆辨读书网——您的图书好帮手</title>
+    <meta charset="UTF-8">
+    <title>cscnh主界面</title>
 </head>
-
 <body>
-	<div class="nav">
-		<div class="ywtop_con">
-			<div class="ywtop_addfavorite"><a onclick="javascript:window.external.addFavorite('http://cscnh.cn','豆辨读书-您的图书好帮手')" href="#">豆辨读书</a></div>
-		</div>
-		<div class="nav">
-			<form name="frmlogin" id="frmlogin" action="/login.php?jumpurl=http://cscnh.cn/" method="post">
-				<div class="cc">
-					<div class="txt">账号：</div>
-					<div class="inp"><input name="LoginForm[username]" id="username" type="text">
-					</div>
-				</div>
-				<div class="cc"><div class="txt">密码：</div>
-					<div class="inp"><input name="LoginForm[password]" id="password" type="password"></div>
-				</div>
-				<div class="frii"><input class="int" type="submit" value=" "></div>
-				<div class="ccc"><div class="txtt"><a href="/getpass.php">忘记密码</a></div>
-					<a class="txtt"><a href="/register.php">用户注册</a>
-					</a>
-				</div>
-			</form>
-		</div>
-	</div>
-	<a href="http://cscnh.cn";target="_blank">
-		<img height="80px";
-		 title="http://cncnh.cn";
-		src="https://wx3.sinaimg.cn/large/70eb479bly1g03ngb586vj20gm0gm76y.jpg"/>
-		</a>
-	<a href="http://cscnh.cn">豆辨读书</a>
-	
-	
-	<ul id="menu">
-			<li>
-				<a href="http://cscnh.cn">首页</a>
-			</li>
-			<li>
-				<a href="/jinrituijian/">今日推荐</a>
-			</li>
-			<li>
-				<a href="/wodeshudan/">我的书单</a>
-			</li>
-			<li>
-				<a href="/dushutop250/">豆辨读书Top250</a>
-			</li>
-			<li>
-				<a href=""
-			</li>
-		</ul>
-	<script type="text/javascript">top_bar();</script>
+<h2>从以下列表选取访问:</h2>
+<br>
+<ul id="main"></ul>
+<li>
+    <a href="/index.php">wordpress更新说明</a>
+</li>
+<li>
+    <a href="/web/book/index.html">图书查询系统</a>
+</li>
+<p>by 陈南华</p>
+
+<footer>
+<div data-value="设置备案信息" style="width:300px;margin:0 auto; padding:20px 0;">
+    <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44011302001914"
+       style="display:inline-block;text-decoration:none;height:20px;line-height:20px;">
+        <img alt="图片未找到" src="image/beian.png" 	style="float:left;"/>
+        <p style="float:left;height:20px;line-height:20px;margin: 0 0 0 5px; color:#939393;">粤公网安备 44011302001914号</p><br>
+        <img alt="图片未找到" src="image/my_icon.png" style="float:left;"/>
+        <p style="float:left;height:20px;line-height:20px;margin: 0 0 0 5px; color:#939393;">联系方式：2630966248@qq.com</p>
+    </a>
+</div>
+</footer>
 </body>
 </html>
