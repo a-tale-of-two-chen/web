@@ -1,0 +1,21 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: 26309
+ * Date: 2019/3/28
+ * Time: 14:54
+ */
+?>
+<footer>
+    <div data-value="设置备案信息" style="width:300px;margin:0 auto; padding:20px 0;">
+        <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44011302001914"
+           style="display:inline-block;text-decoration:none;height:20px;line-height:20px;">
+            <img alt="图片未找到" src="/image/beian.png" style="float:left;"/>
+            <p style="float:left;height:20px;line-height:20px;margin: 0 0 0 5px; color:#939393;">粤公网安备
+                44011302001914号</p><br>
+            <img alt="图片未找到" src="/image/my_icon.png" style="float:left;"/>
+            <p style="float:left;height:20px;line-height:20px;margin: 0 0 0 5px; color:#939393;">
+    联系方式：2630966248@qq.com</p>
+        </a>
+    </div>
+</footer>
