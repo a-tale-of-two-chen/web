@@ -26,17 +26,18 @@
 
 </head>
 <body>
-<h2>欢迎使用：</h2>
+<h2>欢迎使用!</h2>
+<h3>首页推荐</h3>
 <p>
-    <small>注：仅包含查询逻辑</small>
+    <small>注：UI是不存在的，仅包含查询逻辑</small>
 </p>
-<table border="10">
+<table width="100%" border="10" cellpadding="0" cellspacing="0" style="table-layout:fixed">
     <tr>
-        <td>编号</td>
-        <td>类型</td>
-        <td>书名</td>
-        <td>作者</td>
-        <td>评分</td>
+        <td width="50px">编号</td>
+        <td width="40px">类型</td>
+        <td width="150px">书名</td>
+        <td width="200px">作者</td>
+        <td width="40px">评分</td>
         <td width="700px">简介</td>
         <td>网址</td>
     </tr>
@@ -70,7 +71,7 @@
     }
     ?>
 </table>
-<h3>从以下分类中确定要浏览的对象后开始搜索</h3>
+<h3>一共有16335本书，从以下分类中确定要浏览的对象后开始搜索</h3>
 <table  border="0">
     <tr id="Kind">
         <td>小说</td>
@@ -122,7 +123,7 @@
         <td>日本文学</td>
     </tr>
 </table>
-<h3>开始搜索：(选择类型后输入对应类型可以浏览该类型的书籍，模糊匹配需要用%...%<br>包围被搜索字符串不要问我为什么不用JS做，垃圾JS。</h3>
+<h3>开始搜索：(选择类型后输入对应类型可以浏览该类型的书籍，模糊匹配需要用%...%包围被搜索字符串。)</h3>
 <p>选择执行条件</p>
 <form action="search.php" method="get">
     <select name="范围">
