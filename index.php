@@ -1,9 +1,9 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <link rel="shortcut icon" href="/image/favicon.ico" type="image/x-icon"/>
-    <link rel="icon" href="/image/favicon.ico" type="image/x-icon"/>
+    <?php
+    include './header.php';
+    ?>
     <title>项目主界面</title>
 </head>
 <body>

@@ -1,9 +1,10 @@
-<!doctype html>
+<!Doctype html>
 <html lang="UTF-8">
 <head>
-    <meta charset="utf-8">
-    <link rel="shortcut icon" href="/image/favicon.ico" type="image/x-icon"/>
-    <link rel="icon" href=" /image/favicon.ico" type="image/x-icon"/>
+    <?php
+    include '../header.php';
+    ?>
+    <title>图书查询系统的网页实现</title>
     <style type="text/css">
         li.horizental {
             float: left;
@@ -22,7 +23,7 @@
             word-wrap: break-word;
         }
     </style>
-    <title>图书查询系统的网页实现</title>
+
 
 </head>
 <body>

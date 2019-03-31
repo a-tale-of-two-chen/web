@@ -56,6 +56,9 @@ $stmt->bind_result($ID, $Kind, $Name, $Author, $Score, $Syno, $Site);
 <!DOCTYPE html>
 <html lang="UTF-8">
 <head>
+    <?php
+    include '../header.php';
+    ?>
     <title>结果集</title>
 </head>
 <body>

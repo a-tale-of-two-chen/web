@@ -2,17 +2,44 @@
 /**
  * Created by PhpStorm.
  * User: 26309
- * Date: 2019/3/17
- * Time: 16:43
+ * Date: 2019/3/31
+ * Time: 19:26
  */
-if(!function_exists('mysqli_init')&&!extension_loaded('mysqli')){
-    echo 'We don\'t have mysqli!!!';
-} else {
-    echo 'Phew we have it!<br>';
-}
 ?>
----------------------
-作者：jlu16
-来源：CSDN
-原文：https://blog.csdn.net/jlu16/article/details/79504784
-版权声明：本文为博主原创文章，转载请附上博文链接！
+<!Doctype html>
+<html lang="UTF-8">
+<head>
+    <?php
+    include 'header.php';
+    ?>
+    <title>图书查询系统的网页实现</title>
+    <style type="text/css">
+        footer {
+            width: 100%;
+            height: 100px; /* footer的高度一定要是固定值*/
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+            background: #333;
+        }
+    </style>
+</head>
+<body>
+<footer>
+    <div data-value="设置备案信息" style="width:300px;margin:0 auto; padding:20px 0;">
+        <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44011302001914"
+           style="display:inline-block;text-decoration:none;height:20px;line-height:20px;">
+            <img alt="图片未找到" src="/web/image/beian.png" style="float:left;"/>
+            <p style="float:left;height:20px;line-height:20px;margin: 0 0 0 5px; color:#939393;">粤公网安备
+                44011302001914号</p><br>
+        </a>
+        <br>
+        <a target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=WzgzPjV2Ii52ODMyGyoqdTg0Ng"
+           style="text-decoration:none;">
+            <img src="http://rescdn.qqmail.com/zh_CN/htmledition/images/function/qm_open/ico_mailme_01.png"
+                 style="float:left;"/>
+            <p style="float:left;height:20px;line-height:20px;margin: 0 0 0 5px; color:#939393;">←反馈渠道</p>
+        </a>
+    </div>
+</footer>
+</body>
