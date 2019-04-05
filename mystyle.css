@@ -1,8 +1,6 @@
-/*
-这份css样式表现目前只是指定footer在最底部
- */
+/*我的设置*/
 html,body {
-    background: #f1f1f1;
+    background: #ffffff;
 
     /*保证footer是相对于container位置绝对定位*/
     position:relative;
@@ -18,5 +16,6 @@ footer{
     position:absolute;
     bottom:0px;
     left:0px;
-    background: #f1f1f1;
+    background: #ffffff;
 }
+

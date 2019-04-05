@@ -1,3 +1,4 @@
+<!DOCTYPR html>
 <html lang="UTF-8">
 <head>
     <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>

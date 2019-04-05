@@ -73,7 +73,7 @@
     ?>
 </table>
 <h3>一共有16335本书，从以下分类中确定要浏览的对象后开始搜索</h3>
-<table  border="0">
+<table border="0">
     <tr id="Kind">
         <td>小说</td>
         <td>随笔</td>
@@ -143,3 +143,4 @@ include '../footer.php';
 </body>
 
 </html>
+

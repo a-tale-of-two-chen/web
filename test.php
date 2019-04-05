@@ -1,45 +1,68 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: 26309
- * Date: 2019/3/31
- * Time: 19:26
- */
-?>
-<!Doctype html>
-<html lang="UTF-8">
+<!doctype html>
+<html lang="en">
 <head>
-    <?php
-    include 'header.php';
-    ?>
-    <title>图书查询系统的网页实现</title>
-    <style type="text/css">
-        footer {
-            width: 100%;
-            height: 100px; /* footer的高度一定要是固定值*/
-            position: absolute;
-            bottom: 0px;
-            left: 0px;
-            background: #333;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <title>登陆界面1</title>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
-<footer>
-    <div data-value="设置备案信息" style="width:300px;margin:0 auto; padding:20px 0;">
-        <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44011302001914"
-           style="display:inline-block;text-decoration:none;height:20px;line-height:20px;">
-            <img alt="图片未找到" src="/web/image/beian.png" style="float:left;"/>
-            <p style="float:left;height:20px;line-height:20px;margin: 0 0 0 5px; color:#939393;">粤公网安备
-                44011302001914号</p><br>
-        </a>
-        <br>
-        <a target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=WzgzPjV2Ii52ODMyGyoqdTg0Ng"
-           style="text-decoration:none;">
-            <img src="http://rescdn.qqmail.com/zh_CN/htmledition/images/function/qm_open/ico_mailme_01.png"
-                 style="float:left;"/>
-            <p style="float:left;height:20px;line-height:20px;margin: 0 0 0 5px; color:#939393;">←反馈渠道</p>
-        </a>
+<div class="container">
+    <!-- 导航 -->
+    <div class="nav">
+        <ul>
+            <li><a href="#">链接三</a></li>
+            <li><a href="#">链接二</a></li>
+            <li><a href="#">链接一</a></li>
+            <li><a href="#">首页</a></li>
+        </ul>
     </div>
-</footer>
+
+    <!-- 主体内容 （登陆界面）-->
+    <div class="main">
+        <!-- 左侧信息栏 -->
+        <div class="sideleft">
+            <h1>海量品牌    信息共享</h1>
+            <h4>数据结合商业  让大数据发挥大价值</h4>
+            </br></br></br>
+            <p>精准营销、数据化管理，提升管理水平。</p>
+            <p>打造线上线下数字一体化。</p>
+            <p>双选平台，建立工厂与经销商双向选择平台。</p>
+            <p>服务市场，塑造经销商信用等级，为其提供相应的金融服务。</p>
+
+        </div>
+        <!-- 右侧登陆界面 -->
+        <div class="sideright">
+            <div class="index">
+                <form action="#" method="get">
+                    <p class="headline">用户登陆</p>
+                    <p class="astyle">用户名：</p>
+                    <input type="text" value="请输入您的手机号">
+                    <p class="astyle">密码：</p>
+                    <input type="text" value="请输入密码">
+                    <input type="submit" value="登陆" name="login" >
+                    </br>
+                    <p class="bstyle"><input type="checkbox" name="rempas" />  记住密码</p>
+                    <p class="cstyle">忘记密码</p>
+                    </br></br>
+                    <p class="cstyle">没有账号？<a href="zhuce.html">立即注册</a></p>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- 尾部 -->
+    <div class="footer">
+        <ul>
+            <li><a href="#">关于我们</a></li>
+            <li><a href="#">诚聘人才</a></li>
+            <li><a href="#">联系商家</a></li>
+            <li><a href="#">广告服务</a></li>
+            <li><a href="#">浙江省宁波市鄞州区xx路666号xxx公司 Camping 2018-2010</a></li>
+        </ul>
+
+    </div>
+
+</div>
 </body>
+</html>
