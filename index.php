@@ -1,4 +1,12 @@
-﻿<!DOCTYPE html>
+﻿<?php
+    session_start();
+    if(isset($_SESSION['name'])){
+        echo"<h2>请先登录。</h2>";
+        exit();
+    }
+    $name=$_SESSION['name']
+?>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <?php
@@ -7,6 +15,7 @@
     <title>项目主界面</title>
 </head>
 <body>
+<h2>你好！<?php echo $name?></h2>
 <h2>从以下列表选取访问:</h2>
 <br>
 <ul id="main"></ul>

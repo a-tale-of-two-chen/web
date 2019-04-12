@@ -1,3 +1,9 @@
+/**
+* Created by PhpStorm.
+* User: 26309
+* Date: 2019/4/5
+* Time: 18:14
+*/
 <!DOCTYPE html>
 <html>
 <head>
@@ -24,9 +30,4 @@
 
 </html>
 <?php
-/**
- * Created by PhpStorm.
- * User: 26309
- * Date: 2019/4/5
- * Time: 18:14
- */
+

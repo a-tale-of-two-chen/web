@@ -1,3 +1,25 @@
+<?php
+    if(isset($_POST['name'])){
+        @$name=$_POST["name"];
+        @$password=$_POST["password"];
+
+        include '../mysql.php';
+        $db->select_db('user');
+        $query="select password from user.users where name=?";
+        $stmt=$db->prepare($query);
+        $stmt->bind_param('s',$name);
+        $stmt->execute();
+        $stmt->store_result();                      //缓存结果
+        $stmt->bind_result($password_db);    //结果绑定变量
+        $stmt->fetch();                              //取结果
+        if(password_verify($password,$password_db)){
+            $_SESSION["name"] = $name;
+            echo "<h1>登录成功!</h1>";
+            echo "<meta charset='UTF-8' http-equiv='refresh' content=\"1;url=/web/index.php\">";
+            exit();
+        }
+    }
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -32,7 +54,7 @@
         <!-- 右侧登陆界面 -->
         <div class="sideright">
             <div class="index">
-                <form action="confirm.php" method="post">
+                <form action="login.php" method="post">
                     <p class="headline">用户登陆</p>
                     <p class="astyle">用户名：</p>
                     <input name="name" type="text" placeholder="请输入您的用户名" required>
@@ -44,7 +66,7 @@
                     <p class="bstyle"><input type="checkbox" name="rempas" />  记住密码</p>
                     <p class="cstyle"><a href="forget.php">忘记密码</a> </p>
                     </br></br>
-                    <p class="cstyle">没有账号？<a href="register.php">立即注册</a></p>
+                    <p class="cstyle">没有账号？<a href="register.php?register=register">立即注册</a></p>
                 </form>
 
             </div>
@@ -65,10 +87,4 @@
 </body>
 </html>
 
-<?php
-/**
- * Created by PhpStorm.
- * User: 26309
- * Date: 2019/3/31
- * Time: 22:04
- */
+
