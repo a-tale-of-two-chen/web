@@ -126,7 +126,7 @@
 </table>
 <h3>开始搜索：(选择类型后输入对应类型可以浏览该类型的书籍，模糊匹配需要用%...%包围被搜索字符串。)</h3>
 <p>选择执行条件</p>
-<form action="search.php" method="get">
+<form action="kind-result.php" method="get">
     <select name="范围">
         <option value="全部" selected="selected">全部</option>
         <option value="书名">书名</option>

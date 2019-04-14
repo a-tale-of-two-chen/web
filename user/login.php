@@ -19,6 +19,7 @@ if(isset($_COOKIE['name'])){
     }
 }
 if (isset($_POST['name'])&&!isset($_COOKIE['name'])) {
+    session_start();
     @$name = $_POST["name"];
     @$password = $_POST["password"];
 
