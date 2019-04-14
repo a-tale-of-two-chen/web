@@ -11,6 +11,20 @@ if (!isset($_SESSION['name']) && !isset($_COOKIE['name'])) {
 //}
 if (isset($_SESSION['name'])) $name = $_SESSION['name'];
 if (isset($_COOKIE['name'])) $name = $_COOKIE['name'];
+
+//验证用户名是否正确
+@$name = $_COOKIE['name'];
+include './mysql.php';
+$db->select_db('user');
+$query = "select password from user.users where name=?";
+$stmt  = $db->prepare($query);
+$stmt->bind_param('s', $name);
+$stmt->execute();
+if ($stmt->affected_rows == 0) {             //判断有没有该用户
+    echo "<h1>没有该用户!</h1>";
+    echo "<meta charset='UTF-8' http-equiv=\"refresh\" content=\"1;url=login.php\">";
+    exit();
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">

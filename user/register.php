@@ -31,6 +31,17 @@ if ($register != "register") {      //如果不是login发来的注册请求,执
     $db->select_db('user');
 
     if (isset($_POST['mail'])) {
+
+        $query = "select password from user.users where name=?";
+        $stmt  = $db->prepare($query);
+        $stmt->bind_param('s', $name);
+        $stmt->execute();
+        if ($stmt->affected_rows > 0) {             //判断有没有该用户
+            echo "<h1>名字被抢注了哦！</h1>";
+            echo "<meta charset='UTF-8' http-equiv=\"refresh\" content=\"1;url=register.php\">";
+            exit();
+        }
+
         $query = "insert into users values (?,?,?,?)";
         $stmt  = $db->prepare($query);
         $stmt->bind_param('dsss', $number, $name, $password_hash, $mail);
