@@ -1,4 +1,5 @@
 <?php
+//处理注册请求
 session_start();
 if (isset($_POST['name']) && !isset($_COOKIE['name'])) {
     @$name = $_POST["name"];
@@ -12,17 +13,17 @@ if (isset($_POST['name']) && !isset($_COOKIE['name'])) {
     $stmt->execute();
     if ($stmt->affected_rows == 0) {             //判断有没有该用户
         echo "<h1>没有该用户!</h1>";
-        echo "<meta charset='UTF-8' http-equiv=\"refresh\" content=\"1;url=login.php\">";
+        echo "<meta charset='UTF-8' http-equiv=\"refresh\" content=\"0.5;url=login.php\">";
         exit();
     }
-    $stmt->store_result();                       //缓存结果
-    $stmt->bind_result($password_db);     //结果绑定变量
-    $stmt->fetch();                             //取结果
+    $stmt->store_result();                        //缓存结果
+    $stmt->bind_result($password_db);      //结果绑定变量
+    $stmt->fetch();                               //取结果
     if (password_verify($password, $password_db)) {
         $_SESSION["name"] = $name;
         setcookie("name", $name, time() + 2147483,"/");
         echo "<h1>登录成功!</h1>";
-        echo "<meta charset='UTF-8' http-equiv='refresh' content=\"1;url=/web/index.php\">";
+        echo "<meta charset='UTF-8' http-equiv='refresh' content=\"0.5;url=/web/index.php\">";
         exit();
     } else {
         echo "<h2>密码错误！</h2>";
@@ -30,6 +31,7 @@ if (isset($_POST['name']) && !isset($_COOKIE['name'])) {
         exit();
     }
 }
+//判断自动登录
 if (isset($_COOKIE['name'])) {
     $name = $_COOKIE['name'];
     include '../mysql.php';
@@ -40,12 +42,12 @@ if (isset($_COOKIE['name'])) {
     $stmt->execute();
     if ($stmt->affected_rows == 0) {             //判断有没有该用户
         echo "<h1>没有该用户!</h1>";
-        echo "<meta charset='UTF-8' http-equiv=\"refresh\" content=\"1;url=login.php\">";
+        echo "<meta charset='UTF-8' http-equiv=\"refresh\" content=\"0.5;url=login.php\">";
         exit();
     } else {
         $_SESSION["name"] = $name;
         echo "<h1>登录成功!</h1>";
-        echo "<meta charset='UTF-8' http-equiv='refresh' content=\"1;url=/web/index.php\">";
+        echo "<meta charset='UTF-8' http-equiv='refresh' content=\"0.5;url=/web/index.php\">";
         exit();
     }
 }

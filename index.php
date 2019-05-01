@@ -20,9 +20,10 @@ $query = "select password from user.users where name=?";
 $stmt  = $db->prepare($query);
 $stmt->bind_param('s', $name);
 $stmt->execute();
+$stmt->store_result();
 if ($stmt->affected_rows == 0) {             //判断有没有该用户
     echo "<h1>没有该用户!</h1>";
-    echo "<meta charset='UTF-8' http-equiv=\"refresh\" content=\"1;url=login.php\">";
+    echo "<meta charset='UTF-8' http-equiv=\"refresh\" content=\"0.5;url=/web/user/login.php\">";
     exit();
 }
 ?>
@@ -43,7 +44,10 @@ if ($stmt->affected_rows == 0) {             //判断有没有该用户
     <a href="/index.php">wordpress更新说明</a>
 </li>
 <li>
-    <a href="/web/book/index.php">图书查询系统</a>
+    <a href="book/index.php">图书查询系统</a>
+</li>
+<li>
+    <a href="huaji/huaji.php">滑天下之大稽</a>
 </li>
 <p>by 陈南华</p>
 

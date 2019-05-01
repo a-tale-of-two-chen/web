@@ -5,7 +5,12 @@
  * Date: 2019/3/28
  * Time: 22:34
  */
-header("content-type:text/html;charset=utf-8");
+$select = $_GET["范围"];
+$search = $_GET['search'];
+
+//根据选择的查询范围跳转到不同的查询页面
+if($select!="类型")header("location: /web/book/search.php?范围=".$select."&search=".$search);
+header("content-type: text/html;charset=utf-8");
 //连接数据库
 $db = new mysqli('127.0.0.1', 'root', '51130012cyc', 'book');
 if (mysqli_connect_error()) {
